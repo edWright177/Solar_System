@@ -1,0 +1,15 @@
+(window["canvasWebpackJsonp"]=window["canvasWebpackJsonp"]||[]).push([[4099],{LO41:function(e,a,n){"use strict"
+n.r(a)
+var r=n("ouhR")
+var t=n.n(r)
+var d=n("HGxv")
+var o=d["default"].scoped("user_grades")
+n("dhbk")
+t()(document).ready((function(){t()(".grading_periods_selector").each((function(){const e=t()(this),a=e.find("option:selected").val()
+e.val(a)}))
+t()(".grading_periods_selector").on("change",(function(e){const a=t()(this),n=a.val(),r=a.attr("data-enrollment-id")
+t.a.ajaxJSON(ENV.grades_for_student_url,"GET",{grading_period_id:n,enrollment_id:r},e=>{let a,n=t()(this).closest("tr").children(".percent")
+a=e.hide_final_grades?"--":e.grade||0===e.grade?e.grade+"%":o.t("no grade")
+n.text(a)})}))}))}}])
+
+//# sourceMappingURL=user_grades-c-c69cfb611b.js.map
